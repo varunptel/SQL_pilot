@@ -30,3 +30,15 @@ ON table1.column_name = table2.column_name);
 
 
 
+### 2. LEFT OUTER JOIN
+The `LEFT JOIN` selects all the records from the left table and only matched record from the right table.
+
+#### **Syntax:**
+```sql
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+If there is no match from the right table then the result for the column from the right table is NULL.
