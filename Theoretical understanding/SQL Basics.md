@@ -1,6 +1,17 @@
 # SQL: Structured Query Language
 
-**SQL** (originally Structured English Query Language) is the standard language used to manage and manipulate **Relational Databases**. It allows developers to interact with database software to store, retrieve, and edit data efficiently.
+
+## SQL ENGINE ARCHITECTURE
+
+Once the SQL query reaches the Database Management System, it goes through processes as follows:
+
+### The Parser: It checks the syntax of the query and throws an error if there is any mistake.
+### The Optimizer: It looks at your request and find the fastest way to get the data either through INDEX or TABLE scan.
+### The Storage Engine: It pulls the data from the SSD/Disk and puts it into the RAM (Buffer Pool) so it's ready for the next person who asks for it.:
+
+
+### SQL (Structured English Query Language):
+SQL is the standard language used to manage and manipulate **Relational Databases**. It allows developers to interact with database software to store, retrieve, and edit data efficiently.
 
 ---
 
