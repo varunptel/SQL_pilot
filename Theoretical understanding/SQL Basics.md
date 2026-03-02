@@ -53,3 +53,17 @@ ON table1.column_name = table2.column_name;
 ```
 
 If there is no match from the right table then the result for the column from the right table is NULL.
+
+
+### 2. LEFT OUTER JOIN
+The `RIGHT JOIN` selects all the records from the right table and only matched record from the right table.
+
+
+#### **Syntax:**
+```sql
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+The `RIGHT JOIN` returns all the records from the right table even if there is no match from the left table.
