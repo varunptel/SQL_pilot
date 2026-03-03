@@ -67,3 +67,16 @@ RIGHT JOIN table2
 ON table1.column_name = table2.column_name;
 ```
 The `RIGHT JOIN` returns all the records from the right table even if there is no match from the left table.
+
+
+### 4. FULL OUTER JOIN
+The `FULL JOIN` returns all the rows from both the tables whether the other table matches or not.
+
+#### **Syntax:**
+```sql
+SELECT column_name(s)
+FROM table1
+FULL JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+```
