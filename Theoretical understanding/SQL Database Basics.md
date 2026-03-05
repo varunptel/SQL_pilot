@@ -33,3 +33,58 @@ CREATE TABLE new_table_name AS
     WHERE ....;
 ```
 
+### ALTER TABLE 
+`ALTER TABLE` is used to add, delete or modify the columns in an existing table. ALso, it can be used to add or drop different constraints on table.
+
+***SYNTAX FOR ADD COLUMN***
+ ```sql
+ALTER TABLE table_name
+ADD column_name datatype;
+```
+
+***SYNTAX FOR DROP COLUMN***
+
+ ```sql
+ALTER TABLE table_name
+DROP COLUMN column_name;
+```
+***SYNTAX FOR RENAME COLUMN NAME***
+
+
+```sql
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+```
+(SYNTAX may change depending on the type of SQL Server one is using).
+
+***ALTER/MODIFY DATATYPE***
+
+```sql
+ALTER TABLE table_name
+ALTER COLUMN column_name new_datatype;
+```
+(SYNTAX may change depending on the type of SQL Server one is using).
+```sql
+ALTER TABLE table_name
+MODIFY column_name new_datatype;
+```
+
+## SQL CONSTRAINTS:
+
+They are used to specify the rules for data in the table.
+
+
+The following constraints are commonly used in SQL:
+
+| Constraint | Description |
+| :--- | :--- |
+| **NOT NULL** | Column cannot have a NULL value |
+| **UNIQUE** | All values in a column are different |
+| **PRIMARY KEY** | A combination of NOT NULL and UNIQUE; uniquely identifies each row |
+| **FOREIGN KEY** | Prevents actions that would destroy links between tables |
+| **CHECK** | Ensures values in a column satisfy a specific condition |
+| **DEFAULT** | Sets a default value if no value is specified |
+| **CREATE INDEX** | Used to create and retrieve data very quickly |
+
+
+**W3Schools**: Referenced for SQL syntax and keyword definitions. [Link](https://www.w3schools.com/sql/)
