@@ -83,7 +83,7 @@ WHERE condition;
 
 ---
 ## GROUP BY Statement:
-The GROUP BY statement is used to group rows which have same values into summary rows. It is always used in conjuction with aggregate functions to perform calculations on each group.
+The `GROUP BY` statement is used to group rows which have same values into summary rows. It is always used in conjuction with aggregate functions to perform calculations on each group.
 
 #### **SYNTAX**
 ```sql
@@ -93,5 +93,20 @@ WHERE condition
 GROUP BY column1, column3
 ORDER BY column_name;
 ```
+---
 
+SQL HAVING Clause
+
+The having clause is used to filter the result of a `GROUP BY` query based on Aggregate Function. Unlike the WHERE clause, which filters individual rows before grouping, HAVING filters groups after the aggregation has been performed.
+
+
+```sql
+SELECT column1, aggregate_function(column2), column3, ...
+FROM table_name
+WHERE condition
+GROUP BY column1, column3
+HAVING condition -- The condition on grouped data
+ORDER BY column_name;
+```
+---
 
