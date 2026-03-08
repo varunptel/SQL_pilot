@@ -80,3 +80,18 @@ FULL JOIN table2
 ON table1.column_name = table2.column_name
 WHERE condition;
 ```
+
+---
+## GROUP BY Statement:
+The GROUP BY statement is used to group rows which have same values into summary rows. It is always used in conjuction with aggregate functions to perform calculations on each group.
+
+#### **SYNTAX**
+```sql
+SELECT column1, aggregate_function(column2), column3, ...
+FROM table_name
+WHERE condition
+GROUP BY column1, column3
+ORDER BY column_name;
+```
+
+
