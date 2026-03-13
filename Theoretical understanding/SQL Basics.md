@@ -95,7 +95,7 @@ ORDER BY column_name;
 ```
 ---
 
-SQL HAVING Clause
+## SQL HAVING Clause
 
 The having clause is used to filter the result of a `GROUP BY` query based on Aggregate Function. Unlike the WHERE clause, which filters individual rows before grouping, HAVING filters groups after the aggregation has been performed.
 
@@ -109,4 +109,32 @@ HAVING condition -- The condition on grouped data
 ORDER BY column_name;
 ```
 ---
+
+## SQL INSERT INTO SELECT Statement
+
+It is used to copy data from an existing table and insert into another existing table with/without specific condition.
+```sql
+INSERT INTO target_table
+SELECT * FROM source_table
+WHERE condition;
+```
+If column names are omitted, then the number of columns in the source and target table must be exactly the same. Otherwise, one can use following syntax.
+```sql
+INSERT INTO target_table (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM source_table
+WHERE condition;
+```
+---
+
+## SQL NULL Functions
+
+SQL has some built-in functions to handle NULL values, and the most common functions are:
+
+- COALESCE() - The preferred standard. (Works in MySQL, SQL Server and Oracle)
+- IFNULL() - (MySQL)
+- ISNULL() - (SQL Server)
+= NVL() - (Oracle)
+- IsNull() - (MS Access)
+
 
