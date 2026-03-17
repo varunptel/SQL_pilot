@@ -71,3 +71,23 @@ WHERE city = 'New York' AND loyalty_score > 80;
 
 2. Customer Order History
 Goal: Generate a list of all orders including the customer's name and the date they placed the order.
+```sql
+SELECT 
+    o.order_id, 
+    c.customer_name, 
+    o.order_date
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id;
+```
+3. Departmental Headcount
+Goal: Count how many employees are in each department. Only show departments that have at least one employee.
+
+```sql
+SELECT 
+    d.dept_name, 
+    COUNT(e.employee_id) AS total_employees
+FROM departments d
+JOIN employees e ON d.dept_id = e.dept_id
+GROUP BY d.dept_name;
+```
+
