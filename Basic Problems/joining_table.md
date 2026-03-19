@@ -26,10 +26,36 @@ To ensure we include everyone from the `Person` table even if they don't have a 
 
 ```sql
 SELECT 
-    p.firstName, 
-    p.lastName, 
-    a.city, 
-    a.state
+p.firstName,p.lastName, a.city, a.state
 FROM Person p
 LEFT JOIN Address a 
 ON p.personId = a.personId;
+```
+
+## 2. Employees Earning More Than Their Managers
+
+### Problem Description
+Find all employees who earn more than their managers. Each row contains an `id`, `name`, `salary`, and `managerId`.
+
+**Table: Employee**
+
+| Column Name | Type    |
+| :---        | :---    |
+| id          | int     |
+| name        | varchar |
+| salary      | int     |
+| managerId   | int     |
+
+---
+
+### Solution: Self-Join approach
+
+By joining the table to itself, we can align each employee's salary directly with their manager's salary on the same row for comparison.
+
+```sql
+SELECT e.name AS Employee
+FROM Employee e
+INNER JOIN Employee m 
+ON e.managerId = m.id
+WHERE e.salary > m.salary;
+```
