@@ -59,3 +59,17 @@ INNER JOIN Employee m
 ON e.managerId = m.id
 WHERE e.salary > m.salary;
 ```
+
+### 3. INNER JOIN approach
+You have a Users table and a Repositories table. You need to find which user owns which repository.
+
+Goal: List the username and the repo_name for all repositories.
+
+```sql
+SELECT 
+    Users.username, 
+    Repositories.repo_name
+FROM Users
+INNER JOIN Repositories ON Users.user_id = Repositories.owner_id;
+```
+
