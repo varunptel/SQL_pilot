@@ -46,7 +46,6 @@ Find all employees who earn more than their managers. Each row contains an `id`,
 | salary      | int     |
 | managerId   | int     |
 
----
 
 ### Solution: Self-Join approach
 
@@ -60,6 +59,11 @@ ON e.managerId = m.id
 WHERE e.salary > m.salary;
 ```
 
+
+---
+
+
+
 ### 3. INNER JOIN approach
 You have a Users table and a Repositories table. You need to find which user owns which repository.
 
@@ -72,4 +76,25 @@ SELECT
 FROM Users
 INNER JOIN Repositories ON Users.user_id = Repositories.owner_id;
 ```
+
+---
+
+
+### 4. 
+Scenario: In a PullRequests table, each PR has an author_id and a reviewer_id. Both IDs refer back to the same Employees table.
+
+Goal: Generate a list showing the Pull Request ID, the name of the Author, and the name of the Reviewer.
+
+```sql
+SELECT 
+    pr.pr_id,
+    author.name AS author_name,
+    reviewer.name AS reviewer_name
+FROM PullRequests pr
+JOIN Employees author ON pr.author_id = author.emp_id
+JOIN Employees reviewer ON pr.reviewer_id = reviewer.emp_id;
+```
+
+---
+
 
